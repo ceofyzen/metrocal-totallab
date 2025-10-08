@@ -1,9 +1,16 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import { Plus_Jakarta_Sans } from 'next/font/google';
 
 // ⬇️ IMPORTANTE: importe a Navbar
 import Navbar from "@/components/Navbar";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans'
+});
 
 export const metadata: Metadata = {
   title: "Metrocal — Totallab",
