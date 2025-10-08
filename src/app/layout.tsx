@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Defina a URL real do login quando tiver; por agora é um placeholder.
-  const LOGIN_URL = "https://example.com/login";
+  const LOGIN_URL = "http://totallab.arkmeds.com/usuarios/conectar?next=/";
 
   return (
     <html lang="pt-BR">
