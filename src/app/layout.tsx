@@ -1,5 +1,5 @@
 // src/app/layout.tsx
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from 'next/font/google';
 
@@ -17,13 +17,20 @@ export const metadata: Metadata = {
   description: "Serviços de metrologia com qualidade e precisão.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover", // iOS notch
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Defina a URL real do login quando tiver; por agora é um placeholder.
   const LOGIN_URL = "http://totallab.arkmeds.com/usuarios/conectar?next=/";
 
   return (
-    <html lang="pt-BR">
-      <body className="antialiased text-gray-900 bg-gradient-to-b from-gray-50 via-white to-gray-100">
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={`antialiased bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}>
         {/* ⬇️ Navbar fixa no topo */}
         <Navbar loginUrl={LOGIN_URL} />
 
