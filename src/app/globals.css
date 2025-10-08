@@ -23,4 +23,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans); /* <— troque o stack fixo pela var */
+  overflow-x: hidden; /* evita “desenquadrar” por causa de larguras fixas */
+  word-wrap: break-word;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: #fff;
+  color: #111827; /* neutral-900 */
 }
+
+img, video { max-width: 100%; height: auto; display: block; }
